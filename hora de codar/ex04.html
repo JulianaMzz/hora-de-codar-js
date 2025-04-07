@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+<body>
+    <script>
+        function calcularAreaQuadrdao() {
+            let lado = parseFloat(prompt("Informe o valor do lado do quadrado:"))
+            let areaQuadrado = lado * lado
+            alert(`A área do quadrado é ${areaQuadrado}`)
+        }
+
+        function calcularAreaRetangulo() {
+            let base = parseFloat(prompt("Informe o vaalor da base do retângulo:"))
+            let altura = parseFloat(prompt("Informe o valor da altura do retâmgulo:"))
+            let areaRetangulo = base * altura
+            alert(`A área do retângulo é ${areaRetangulo}`)
+        }
+
+        function calcularAreCirculo() {
+            let raio = parseFloat(prompt("Informe o valor do raio do círculo:"))
+            let areaCirculo = Math.PI * Math.pow(raio, 2)
+            alert(`A área do circulo é ${areaCirculo.toFixed(2)}`)
+        }
+
+        function calcularAreaTriangulo() {
+            let base = parseFloat(prompt("Informe o valor da base do triângulo:"))
+            let altura = parseFloat(prompt("Informe o valor da altura do triângulo:"))
+            let areaTriangulo = (base * altura) / 2
+            alert(`A área do triângulo é ${areaTriangulo}`)
+        }
+
+        let opcao = parseInt(prompt("Escolha a figura geométrica para calcular a área:\n1 - Quadrado\n2 - Retângulo\n3 - Círculo\n4 - Triângulo"));
+
+switch(opcao) {
+    case 1:
+        calcularAreaQuadrado();
+        break;
+    case 2:
+        calcularAreaRetangulo();
+        break;
+    case 3:
+        calcularAreaCirculo();
+        break;
+    case 4:
+        calcularAreaTriangulo();
+        break;
+    default:
+        alert("Opção inválida. Por favor, escolha um número entre 1 e 4.");
+}
+    </script>
+</body>
+</html>
